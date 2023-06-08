@@ -8,7 +8,7 @@ metadata:
 spec:
  containers:
  - name: web
-   ImagePullPolicy: Always
+   imagePullPolicy: Always
    image: suresh090/web:k8
    ports:
    - containerPort: 80
