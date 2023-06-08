@@ -1,3 +1,13 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: configmap-service
+data:
+mongoURL: "mongodb://mongodb-service:27017/catalogue"
+ MONGO_URL: 
+ 
+---
 apiVersion: v1
 kind: Pod
 metadata:
@@ -10,6 +20,9 @@ spec:
  - name: catalogue
    imagePullPolicy: Always
    image: techworldwithsiva/mongodb:v1
+   envFrom:
+   - configMapRef:
+      name: configmap-service
    
 ---
 apiVersion: v1
