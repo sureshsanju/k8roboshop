@@ -19,7 +19,8 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    server: nginx
+    name: web
+    tier: frontend
   ports:
     - protocol: TCP
       port: 8080
