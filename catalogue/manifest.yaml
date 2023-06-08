@@ -5,7 +5,6 @@ metadata:
   name: configmap-service
 data:
  mongoURL: "mongodb://mongodb-service:27017/catalogue"
- MONGO_URL: 
  
 ---
 apiVersion: v1
