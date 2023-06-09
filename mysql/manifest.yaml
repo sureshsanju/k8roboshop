@@ -34,7 +34,7 @@ spec:
  containers:
  - name: web
    imagePullPolicy: Always
-   image: techworldwithsiva/mysql:v1
+   image: suresh090/mysql:k8
     envFrom:
     - configMapRef:
         name: mysql-config
